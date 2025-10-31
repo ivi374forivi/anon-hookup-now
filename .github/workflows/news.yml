@@ -10,8 +10,8 @@ jobs:
 
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v3
-
+            - uses: actions/checkout@3e2c1f7a4c4d2e5a0e8a7efc6b0e4b211d5e4f6d
+            
             - name: Fetch updates
               run: |
                 curl -s "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/getUpdates?offset=-20" \
